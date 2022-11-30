@@ -1,0 +1,128 @@
+:root{
+    --fur-black: #31292c;
+    --fur-dark: #77563b;
+    --fur-medium: #8b6439;
+    --fur-medium-light: #977456;
+    --fur-light: #bbb9b4;
+    --fur-mark: #342315;    
+    --eye: #c69338;
+    --eye-black: #14101e;
+    --nose: #48465b;
+    --ear: #a8a3a0;
+}
+
+.canvas{
+    border: solid 1px red;
+    position: relative;
+    padding: 4em;
+
+}
+.caracal{
+    background-color: var(--fur-dark);
+}
+.ear{
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 60px solid var(--ear);
+    border-left: 20px solid transparent;
+}
+
+.ear.left{
+    transform: rotate(-30deg);
+    top: -15%;
+    left: 0%;
+}
+.ear.right{
+    transform: rotate(30deg);
+    top: -15%;
+    right: 0%;
+}
+.eye{
+    border-radius: 50%;
+    height: 25px;
+    width: 30px;
+    background-color: var(--eye);
+    position: absolute;
+    border-left: solid 4px var(--eye-black);
+    border-right: solid 4px var(--eye-black);
+    overflow: hidden;
+    top: 40%;
+}
+.eye.left{
+    transform: rotate(20deg);
+    left: 22%;
+    
+}
+
+.eye.right{
+    transform: rotate(-20deg);
+    right: 22%;
+    
+}
+.pupil{
+    background-color: var(--eye-black);
+    border-radius: 50%;
+    height: 20px;
+    width: 10px;
+}
+.eye.right > .pupil{
+    
+    transform: rotate(20deg) translateX(80%) translateY(-50%);
+}
+
+.eye.left > .pupil{
+    
+    transform: rotate(-20deg) translateX(95%) translateY(-15%);
+}
+
+.nose{
+    position: absolute;
+    border-top: 20px solid var(--nose);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    top: 70%;
+    left: 40%;
+    z-index: 999;
+}
+
+.cheek{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 70%;
+    z-index: 998;
+}
+.cheek.left{
+    background: linear-gradient(90deg, var(--fur-medium) 0%, var(--fur-light) 100%);
+    left:27%;
+    border-left: solid var(--fur-black) 4px;
+}
+.cheek.right{
+    background: linear-gradient(270deg, var(--fur-medium) 0%, var(--fur-light) 100%);
+    right:27%;
+    border-right: solid var(--fur-black) 4px;
+}
+.chin{
+    border-radius: 50%;
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    background: linear-gradient(180deg, var(--fur-black) 0%, var(--fur-light) 64%);;
+    top: 84%;
+    left: 37%;
+}
+
+.wrapper{
+    position: absolute;
+}
+
+.head{
+    position: relative;
+    background-color: var(--fur-medium);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
